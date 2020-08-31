@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaAPI", "SocialMediaAPI\SocialMediaAPI.csproj", "{C782BED6-0FA3-471D-93B4-1624ED77A49B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaAPI.Data", "SocialMediaAPI.Data\SocialMediaAPI.Data.csproj", "{65CCC194-6EFC-4828-BDAE-D12A13EBE134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaAPI.Models", "SocialMediaAPI.Models\SocialMediaAPI.Models.csproj", "{8DCA87A8-98EE-40B1-9B67-6C3C6F00141F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaAPI.Services", "SocialMediaAPI.Services\SocialMediaAPI.Services.csproj", "{310E65B2-9B69-487D-9BB9-070B4AB2C599}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{C782BED6-0FA3-471D-93B4-1624ED77A49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C782BED6-0FA3-471D-93B4-1624ED77A49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C782BED6-0FA3-471D-93B4-1624ED77A49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65CCC194-6EFC-4828-BDAE-D12A13EBE134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CCC194-6EFC-4828-BDAE-D12A13EBE134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CCC194-6EFC-4828-BDAE-D12A13EBE134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CCC194-6EFC-4828-BDAE-D12A13EBE134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DCA87A8-98EE-40B1-9B67-6C3C6F00141F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCA87A8-98EE-40B1-9B67-6C3C6F00141F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCA87A8-98EE-40B1-9B67-6C3C6F00141F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCA87A8-98EE-40B1-9B67-6C3C6F00141F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{310E65B2-9B69-487D-9BB9-070B4AB2C599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{310E65B2-9B69-487D-9BB9-070B4AB2C599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{310E65B2-9B69-487D-9BB9-070B4AB2C599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{310E65B2-9B69-487D-9BB9-070B4AB2C599}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

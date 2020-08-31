@@ -213,7 +213,6 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -306,6 +305,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SocialMediaAPI.Data\SocialMediaAPI.Data.csproj">
+      <Project>{65ccc194-6efc-4828-bdae-d12a13ebe134}</Project>
+      <Name>SocialMediaAPI.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocialMediaAPI.Models\SocialMediaAPI.Models.csproj">
+      <Project>{8dca87a8-98ee-40b1-9b67-6c3c6f00141f}</Project>
+      <Name>SocialMediaAPI.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocialMediaAPI.Services\SocialMediaAPI.Services.csproj">
+      <Project>{310e65b2-9b69-487d-9bb9-070b4ab2c599}</Project>
+      <Name>SocialMediaAPI.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
