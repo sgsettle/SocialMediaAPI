@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SocialMediaAPI.Data\SocialMediaAPI.Data.csproj">
+      <Project>{65ccc194-6efc-4828-bdae-d12a13ebe134}</Project>
+      <Name>SocialMediaAPI.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocialMediaAPI.Models\SocialMediaAPI.Models.csproj">
+      <Project>{8dca87a8-98ee-40b1-9b67-6c3c6f00141f}</Project>
+      <Name>SocialMediaAPI.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
