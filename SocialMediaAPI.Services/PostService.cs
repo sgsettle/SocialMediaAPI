@@ -16,23 +16,44 @@ namespace SocialMediaAPI.Services
         {
             _userId = userId;
         }
-    }
 
-    public bool CreatePost(PostCreate model)
-    {
-        var entity =
-            new Post()
-            {
-                Id = model.Id,
-                Title = model.Title,
-                Text = model.Text,
-                Author = model.Author
-            };
 
-        using (var ctx = new ApplicationDbContext())
+        public bool CreatePost(PostCreate model)
         {
-            ctx.Post.Add(entity);
-            return ctx.SaveChanges() == 1;
+            var entity =
+                new Post()
+                {
+                    UserId = _userId,
+                    Id = model.Id,
+                    Title = model.Title,
+                    Text = model.Text
+                };
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Posts.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public IEnumerable<PostListItem> GetPosts()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Posts
+                        .Where(e => e.User.UserId == _userId)
+                        .Select(
+                        e =>
+                            new PostListItem
+                            {
+                                Id = e.Id,
+                                Title = e.Title
+                            }
+                            );
+                return query.ToArray();
+            }
         }
     }
 }

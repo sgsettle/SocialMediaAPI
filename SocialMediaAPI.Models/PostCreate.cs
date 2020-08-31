@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,8 @@ namespace SocialMediaAPI.Models
 
         [MaxLength(8000)]
         public string Text { get; set; }
-        public User Author { get; set; }
+        [ForeignKey(nameof(User))]
+        public Guid Author { get; set; }
+        public virtual User User { get; set; }
     }
 }
