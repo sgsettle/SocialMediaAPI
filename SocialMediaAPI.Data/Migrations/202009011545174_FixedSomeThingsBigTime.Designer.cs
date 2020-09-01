@@ -6,14 +6,14 @@ namespace SocialMediaAPI.Data.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class PleaseWork : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
+    public sealed partial class FixedSomeThingsBigTime : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(PleaseWork));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FixedSomeThingsBigTime));
         
         string IMigrationMetadata.Id
         {
-            get { return "202009011318306_PleaseWork"; }
+            get { return "202009011545174_FixedSomeThingsBigTime"; }
         }
         
         string IMigrationMetadata.Source

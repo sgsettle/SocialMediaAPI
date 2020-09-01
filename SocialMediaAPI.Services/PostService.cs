@@ -19,22 +19,21 @@ namespace SocialMediaAPI.Services
         }
 
 
-        public bool CreatePost(PostCreate model)
+        public bool CreatePost(PostCreate model) // make this Post, not User. Create a User Service for those methods
         {
             var entity =
-                new User()
+                new Post()
                 {
                     UserId = _userId,
-                    Id = model.Id,
+                   // Id = model.Id,
                     Title = model.Title,
                     Text = model.Text,
-                    Name = model.Name,
-                    Email = model.Email
+                    
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Users.Add(entity);
+                ctx.Posts.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
@@ -45,7 +44,7 @@ namespace SocialMediaAPI.Services
             {
                 var query =
                     ctx
-                        .Users
+                        .UserProfiles
                         .Where(e => e.UserId == _userId)
                         .Select(
                         e =>
@@ -65,7 +64,7 @@ namespace SocialMediaAPI.Services
             {
                 var entity =
                     ctx
-                        .Users
+                        .UserProfiles
                         .Single(e => e.Id == id && e.UserId == _userId);
                 return
                     new PostDetail

@@ -34,8 +34,8 @@ namespace SocialMediaAPI.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<User> Users { get; set; }
-        //public DbSet<Post> Posts { get; set; }
+        public DbSet<User> UserProfiles { get; set; }
+        public DbSet<Post> Posts { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

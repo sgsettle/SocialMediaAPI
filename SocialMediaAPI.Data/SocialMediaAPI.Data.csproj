@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -97,14 +99,9 @@
     <Compile Include="Migrations\202008312356518_SecondMigration.Designer.cs">
       <DependentUpon>202008312356518_SecondMigration.cs</DependentUpon>
     </Compile>
-
-    <Compile Include="Migrations\202009010252246_Hope.cs" />
-    <Compile Include="Migrations\202009010252246_Hope.Designer.cs" />
-      <DependentUpon>202009010252246_Hope.cs</DependentUpon>
-    <Compile Include="Migrations\202009011318306_PleaseWork.cs" />
-    <Compile Include="Migrations\202009011318306_PleaseWork.Designer.cs">
-      <DependentUpon>202009011318306_PleaseWork.cs</DependentUpon>
-
+    <Compile Include="Migrations\202009011545174_FixedSomeThingsBigTime.cs" />
+    <Compile Include="Migrations\202009011545174_FixedSomeThingsBigTime.Designer.cs">
+      <DependentUpon>202009011545174_FixedSomeThingsBigTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
@@ -125,13 +122,8 @@
     <EmbeddedResource Include="Migrations\202008312356518_SecondMigration.resx">
       <DependentUpon>202008312356518_SecondMigration.cs</DependentUpon>
     </EmbeddedResource>
-
-    <EmbeddedResource Include="Migrations\202009010252246_Hope.resx">
-      <DependentUpon>202009010252246_Hope.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009011318306_PleaseWork.resx">
-      <DependentUpon>202009011318306_PleaseWork.cs</DependentUpon>
-
+    <EmbeddedResource Include="Migrations\202009011545174_FixedSomeThingsBigTime.resx">
+      <DependentUpon>202009011545174_FixedSomeThingsBigTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

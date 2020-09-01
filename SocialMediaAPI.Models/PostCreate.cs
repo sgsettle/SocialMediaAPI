@@ -11,8 +11,8 @@ namespace SocialMediaAPI.Models
 {
     public class PostCreate
     {
-        [Key]
-        public int Id { get; set; }
+       // [Key]
+      //  public int Id { get; set; }
 
         [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
