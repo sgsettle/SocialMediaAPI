@@ -16,5 +16,30 @@ namespace SocialMediaAPI.Data
         [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+
+
+
+
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Text { get; set; }
+
     }
+    //public class Like
+    //{
+    //    public int Id { get; set; }
+    //    public Posts LikedPost { get; set; }
+    //    public int LikerId { get; set; }
+    //    public User Liker { get; set; }
+    //}
+
+    //public class Comment
+    //{
+    //    public int Id { get; set; }
+    //    public string Text { get; set; }
+    //    public User Author { get; set; }
+    //    public Posts CommentPost { get; set; }
+    //}
+
+
 }

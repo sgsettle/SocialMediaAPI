@@ -2,6 +2,7 @@
 using SocialMediaAPI.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace SocialMediaAPI.Services
         public bool CreatePost(PostCreate model)
         {
             var entity =
-                new Post()
+                new User()
                 {
                     UserId = _userId,
                     Id = model.Id,
@@ -31,7 +32,7 @@ namespace SocialMediaAPI.Services
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Posts.Add(entity);
+                ctx.Users.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
@@ -42,8 +43,8 @@ namespace SocialMediaAPI.Services
             {
                 var query =
                     ctx
-                        .Posts
-                        .Where(e => e.User.UserId == _userId)
+                        .Users
+                        .Where(e => e.UserId == _userId)
                         .Select(
                         e =>
                             new PostListItem
