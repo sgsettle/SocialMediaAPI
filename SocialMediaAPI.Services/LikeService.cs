@@ -23,7 +23,7 @@ namespace SocialMediaAPI.Services
                 new Like()
                 {
                     UserId = _userId,
-                    LikedPost = model.LikedPost
+                    Id = model.Id
 
                 };
 

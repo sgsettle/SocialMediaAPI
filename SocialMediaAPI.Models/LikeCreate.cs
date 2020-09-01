@@ -11,7 +11,7 @@ namespace SocialMediaAPI.Models
     public class LikeCreate
     {
         [ForeignKey(nameof(Post))]
-        public Post LikedPost { get; set; }
+        public Post Id { get; set; }
         public virtual Post Post { get; set; }
 
         [ForeignKey(nameof(User))]

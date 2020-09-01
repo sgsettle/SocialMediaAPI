@@ -12,7 +12,7 @@ namespace SocialMediaAPI.Data
         public int PostId { get; set; }
 
         [ForeignKey(nameof(Post))]
-        public Post LikedPost { get; set; }
+        public Post Id { get; set; }
         public virtual Post Post { get; set; }
 
         public int LikerId { get; set; }
