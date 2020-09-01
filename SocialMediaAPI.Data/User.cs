@@ -14,8 +14,11 @@ namespace SocialMediaAPI.Data
         [Required]
         public string Name { get; set; }
         [Required]
-        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Text { get; set; }
+
 
 
         //public class Posts
