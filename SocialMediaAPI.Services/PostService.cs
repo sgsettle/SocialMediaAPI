@@ -23,10 +23,10 @@ namespace SocialMediaAPI.Services
         var entity =
             new Post()
             {
-                Id = model.Id,
+                UserId = _userId,
                 Title = model.Title,
                 Text = model.Text,
-                Author = model.Author
+
             };
 
         using (var ctx = new ApplicationDbContext())
