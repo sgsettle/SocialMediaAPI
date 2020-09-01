@@ -26,7 +26,9 @@ namespace SocialMediaAPI.Services
                     UserId = _userId,
                     Id = model.Id,
                     Title = model.Title,
-                    Text = model.Text
+                    Text = model.Text,
+                    Name = model.Name,
+                    Email = model.Email
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -53,6 +55,24 @@ namespace SocialMediaAPI.Services
                             }
                             );
                 return query.ToArray();
+            }
+        }
+
+        public PostDetail GetPostById(int id)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Users
+                        .Single(e => e.Id == id && e.UserId == _userId);
+                return
+                    new PostDetail
+                    {
+                        Id = entity.Id,
+                        Title = entity.Title,
+                        Text = entity.Text
+                    };
             }
         }
     }

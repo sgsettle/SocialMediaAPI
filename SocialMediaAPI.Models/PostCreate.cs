@@ -21,6 +21,8 @@ namespace SocialMediaAPI.Models
 
         [MaxLength(8000)]
         public string Text { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
         //[ForeignKey(nameof(User))]
         //public Guid Author { get; set; }
         //public virtual User User { get; set; }
