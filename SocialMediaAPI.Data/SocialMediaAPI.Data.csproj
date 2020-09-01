@@ -97,9 +97,14 @@
     <Compile Include="Migrations\202008312356518_SecondMigration.Designer.cs">
       <DependentUpon>202008312356518_SecondMigration.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Migrations\202009010252246_Hope.cs" />
-    <Compile Include="Migrations\202009010252246_Hope.Designer.cs">
+    <Compile Include="Migrations\202009010252246_Hope.Designer.cs" />
       <DependentUpon>202009010252246_Hope.cs</DependentUpon>
+    <Compile Include="Migrations\202009011318306_PleaseWork.cs" />
+    <Compile Include="Migrations\202009011318306_PleaseWork.Designer.cs">
+      <DependentUpon>202009011318306_PleaseWork.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
@@ -120,8 +125,13 @@
     <EmbeddedResource Include="Migrations\202008312356518_SecondMigration.resx">
       <DependentUpon>202008312356518_SecondMigration.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Migrations\202009010252246_Hope.resx">
       <DependentUpon>202009010252246_Hope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009011318306_PleaseWork.resx">
+      <DependentUpon>202009011318306_PleaseWork.cs</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
