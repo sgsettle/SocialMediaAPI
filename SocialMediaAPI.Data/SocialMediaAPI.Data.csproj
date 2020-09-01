@@ -86,7 +86,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comment.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Like.cs" />
     <Compile Include="Migrations\202008311908378_InitialCreate.cs" />
     <Compile Include="Migrations\202008311908378_InitialCreate.Designer.cs">
       <DependentUpon>202008311908378_InitialCreate.cs</DependentUpon>
