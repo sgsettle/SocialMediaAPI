@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 namespace SocialMediaAPI.Data
 {
     public class Post
-    {[Key]
-        public int Id { get; set; }
+    {
+        [Key]
+        public int PostId { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
          [ForeignKey(nameof(User))]

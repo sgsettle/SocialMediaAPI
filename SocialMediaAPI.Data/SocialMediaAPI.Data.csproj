@@ -105,6 +105,10 @@
     <Compile Include="Migrations\202009011545174_FixedSomeThingsBigTime.Designer.cs">
       <DependentUpon>202009011545174_FixedSomeThingsBigTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009021554380_likeUpdate.cs" />
+    <Compile Include="Migrations\202009021554380_likeUpdate.Designer.cs">
+      <DependentUpon>202009021554380_likeUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009011545174_FixedSomeThingsBigTime.resx">
       <DependentUpon>202009011545174_FixedSomeThingsBigTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009021554380_likeUpdate.resx">
+      <DependentUpon>202009021554380_likeUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

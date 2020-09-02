@@ -12,38 +12,38 @@ namespace SocialMediaAPI.Controllers
 {
     public class CommentController : ApiController
     {
-        private CommentService CreateCommentService()
-        {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var commentService = new CommentService(userId);
-            return commentService;
-        }
+        //private CommentService CreateCommentService()
+        //{
+        //    var userId = Guid.Parse(User.Identity.GetUserId());
+        //    var commentService = new CommentService(userId);
+        //    return commentService;
+        //}
 
-        public IHttpActionResult Get()
-        {
-            CommentService commentService = CreateCommentService();
-            var comments = commentService.GetComments();
-            return Ok(comments);
-        }
+        //public IHttpActionResult Get()
+        //{
+        //    CommentService commentService = CreateCommentService();
+        //    var comments = commentService.GetComments();
+        //    return Ok(comments);
+        //}
 
-        public IHttpActionResult Post(CommentCreate comment)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+        //public IHttpActionResult Post(CommentCreate comment)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
 
-            var service = CreateCommentService();
+        //    var service = CreateCommentService();
 
-            if (!service.CreateComment(comment))
-                return InternalServerError();
+        //    if (!service.CreateComment(comment))
+        //        return InternalServerError();
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
-        public IHttpActionResult Get(int id)
-        {
-            CommentService commentService = CreateCommentService();
-            var comment = commentService.GetCommentById(id);
-            return Ok(comment);
-        }
+        //public IHttpActionResult Get(int id)
+        //{
+        //    CommentService commentService = CreateCommentService();
+        //    var comment = commentService.GetCommentById(id);
+        //    return Ok(comment);
+        //}
     }
 }

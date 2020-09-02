@@ -8,7 +8,7 @@ namespace SocialMediaAPI.Models
 {
     public class CommentCreate
     {
-        public string Text { get; set; }
+       // public string Text { get; set; }
 
     }
 }

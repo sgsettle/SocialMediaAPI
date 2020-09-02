@@ -23,8 +23,7 @@ namespace SocialMediaAPI.Services
                 new Like()
                 {
                     UserId = _userId,
-                    Id = model.Id
-
+                    PostId = model.PostId
                 };
 
             using (var ctx = new ApplicationDbContext())

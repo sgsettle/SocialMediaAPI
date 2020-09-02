@@ -65,11 +65,11 @@ namespace SocialMediaAPI.Services
                 var entity =
                     ctx
                         .Posts
-                        .Single(e => e.Id == id && e.UserId == _userId);
+                        .Single(e => e.PostId == id && e.UserId == _userId);
                 return
                     new PostDetail
                     {
-                        Id = entity.Id,
+                        Id = entity.PostId,
                         Title = entity.Title,
                         Text = entity.Text
                     };
