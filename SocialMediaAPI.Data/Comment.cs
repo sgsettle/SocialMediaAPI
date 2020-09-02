@@ -9,13 +9,15 @@ namespace SocialMediaAPI.Data
 {
     public class Comment
     {
-        //public int Id { get; set; }
-        //public string Text { get; set; }
-        //[ForeignKey(nameof(User))]
-        //public Guid UserId { get; set; }
-        //public virtual User User { get; set; }
-        //[ForeignKey(nameof(Post))]
-        //public Post CommentPost { get; set; }
-        //public virtual Post Post { get; set; }
+        public int CommentId { get; set; }
+        public string Text { get; set; }
+
+        [ForeignKey(nameof(User))]
+        public Guid UserId { get; set; }
+        public virtual User User { get; set; }
+
+        [ForeignKey(nameof(Post))]
+        public int PostId { get; set; }
+        public virtual Post Post { get; set; }
     }
 }

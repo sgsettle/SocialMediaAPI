@@ -109,6 +109,10 @@
     <Compile Include="Migrations\202009021554380_likeUpdate.Designer.cs">
       <DependentUpon>202009021554380_likeUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009021752099_commentUpdate.cs" />
+    <Compile Include="Migrations\202009021752099_commentUpdate.Designer.cs">
+      <DependentUpon>202009021752099_commentUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009021554380_likeUpdate.resx">
       <DependentUpon>202009021554380_likeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009021752099_commentUpdate.resx">
+      <DependentUpon>202009021752099_commentUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
