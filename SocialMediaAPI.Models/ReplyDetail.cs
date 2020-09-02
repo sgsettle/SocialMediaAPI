@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace SocialMediaAPI.Models
 {
-    public class CommentCreate
+    public class ReplyDetail
     {
-        public string Text { get; set; }
-
-        public int PostId { get; set; }
+        public string ReplyComment { get; set; }
     }
 }

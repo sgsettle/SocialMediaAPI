@@ -8,67 +8,50 @@ using System.Threading.Tasks;
 
 namespace SocialMediaAPI.Services
 {
-    public class CommentService
+    public class ReplyService 
     {
         private readonly Guid _userId;
 
-        public CommentService(Guid userId)
+        public ReplyService(Guid userId)
         {
             _userId = userId;
         }
 
 
-        public bool CreateComment(CommentCreate model)
+        public bool CreateReply(ReplyCreate model)
         {
             var entity =
-                new Comment()
+                new Reply()
                 {
                     UserId = _userId,
-                    Text = model.Text,
-                    PostId = model.PostId
+                    PostId = model.PostId,
+                    ReplyComment = model.ReplyComment
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Comments.Add(entity);
+                ctx.Replies.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<CommentListItem> GetComments()
+        public IEnumerable<ReplyListItem> GetReplies()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                        .Comments
+                        .Replies
                         .Where(e => e.UserId == _userId)
                         .Select(
                         e =>
-                            new CommentListItem
+                            new ReplyListItem
                             {
                                 CommentId = e.CommentId,
-                                Text = e.Text
+                                ReplyComment = e.ReplyComment
                             }
                             );
                 return query.ToArray();
-            }
-        }
-
-        public CommentDetail GetCommentById(int id)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var entity =
-                    ctx
-                        .Comments
-                        .Single(e => e.CommentId == id && e.UserId == _userId);
-                return
-                    new CommentDetail
-                    {
-                        CommentId = entity.CommentId,
-                        Text = entity.Text
-                    };
             }
         }
     }
